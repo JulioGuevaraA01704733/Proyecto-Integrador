@@ -43,9 +43,9 @@ public:
   double get_valor() {
     return valor;
   }
-  double pago_mensual() {
-    return valor*1;
-  }
+  virtual double pago_mensual() = 0;
+  virtual string to_string() = 0;
+  
 };
 
 class Jugador: public Empleado  {
@@ -64,6 +64,7 @@ public:
   double pago_mensual() {
     return salario_mensual*1.5;
   }
+  string to_string();
 };
 class Entrenador: public Empleado  {
 private:
@@ -81,5 +82,6 @@ public:
   double pago_mensual() {
     return salario_mensual*1.25;
   }
+  string to_string();
 };
 #endif
