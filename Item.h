@@ -29,24 +29,24 @@ Item(double val, string nom, string tipo_i):
     return tipo_item;
   }
 };
-
+//Declaramos objeto empleado que hereda de Item
 class Empleado: public Item  {
 protected:
   double salario_mensual;
   string tipo_empleado;
 public:
-  Empleado(): Item("", 0,"Empleado"){};
-  Empleado(string nombre, double valor, double salar, string tipo_e): Item(nombre, valor, "Empleado"),
-  salario_mensual(salar), tipo_empleado(tipo_e){};
+  Empleado(): Item(0, "","Empleado"){};
+ Empleado(double valor, string nombre, double salar, string tipo_e): Item(valor, nombre, "Empleado"),
+ salario_mensual(salar), tipo_empleado(tipo_e) {};
+ double get_valor() {
+   return valor;
+  }
   string get_nombre() {
     return nombre;
   }
-  double get_valor() {
-    return valor;
+  double pago_mensual() {
+    return salario_mensual;
   }
-  virtual double pago_mensual() = 0;
-  virtual string to_string() = 0;
-  
 };
 
 class Jugador: public Empleado  {
