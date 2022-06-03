@@ -48,7 +48,7 @@ public:
     return salario_mensual;
   }
   string get_tipo_empleado() {
-    return tipo_empleado
+    return tipo_empleado;
    }
 };
 //Declaramos objeto inmueble que hereda de Item
@@ -57,7 +57,7 @@ protected:
   string localizacion;
   double costo_mensual_mantenimiento;
 public:
-  Inmbueble(): Item(0, "", "Inmueble"){};
+  Inmueble(): Item(0, "", "Inmueble"){};
 Inmueble(double valor, string nombre, string local, double costo_m_m): Item(valor, nombre, "Inmueble"),
 localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
   double get_valor() {
@@ -70,7 +70,7 @@ localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
     return localizacion;
   }
   double get_costo_mensual_mantenimiento() {
-    return costo_mensual_mantenimiento
+    return costo_mensual_mantenimiento;
     }
 };
 #endif
