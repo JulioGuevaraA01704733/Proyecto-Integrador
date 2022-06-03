@@ -8,21 +8,22 @@
 using namespace std;
 
 class Item {
+//declaramos las variables de instancia, como protegidas
 protected:
-  string nombre;
   double valor;
+  string nombre;
   string tipo_item;
-
+//métodos serán públicos
 public:
-  Item(): nombre(""), valor(0), tipo_item("") {};
-Item(string nom, double val, string tipi):
-  nombre(nom), valor(val),tipo_item(tipi) {};
-
-  string get_nombre() {
-    return nombre;
-  }
+  Item(): valor(0), nombre(""), tipo_item("") {}; //constructor default
+Item(double val, string nom, string tipo_i):
+  valor(val), nombre(nom), tipo_item(tipo_i) {};
+//getters
   double get_valor() {
     return valor;
+  }
+  string get_nombre() {
+    return nombre;
   }
   string get_tipo_item() {
     return tipo_item;
