@@ -1,5 +1,6 @@
 #include <iostream>
-#include "Item.h"
+#include "club.h"
+#include "item.h"
 using namespace std;
 int main(){
   Club club;
