@@ -28,6 +28,8 @@ Item(double val, string nom, string tipo_i):
   string get_tipo_item() {
     return tipo_item;
   }
+    virtual string to_string() = 0;
+
 };
 //Declaramos objeto empleado que hereda de Item
 class Empleado: public Item  {
@@ -50,7 +52,15 @@ public:
   string get_tipo_empleado() {
     return tipo_empleado;
    }
+    string to_string();
 };
+string Empleado::to_string() {
+
+  stringstream aux;
+  aux << "Valor es " << valor << " tipo de infraestructura " << tipo_item << " es un " <<
+    " su salario mensual es " << salario_mensual << "\n";
+  return aux.str();
+}
 //Declaramos objeto inmueble que hereda de Item
 class Inmueble: public Item {
 protected:
@@ -72,5 +82,14 @@ localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
   double get_costo_mensual_mantenimiento() {
     return costo_mensual_mantenimiento;
     }
+    string to_string();
+
 };
+string Inmueble::to_string() {
+
+  stringstream aux;
+  aux << "Valor es " << valor << " tipo de infraestructura " << tipo_item << " es el inmueble " << nombre <<
+    " su costo mensual de mantenimiento es " << costo_mensual_mantenimiento << "\n";
+  return aux.str();
+}
 #endif
