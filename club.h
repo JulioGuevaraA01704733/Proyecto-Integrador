@@ -7,7 +7,7 @@
 
 #include <sstream>
 
-#include "prueba_item.h" //biblioteca con mis objetos a usar
+#include "item.h" //biblioteca con mis objetos a usar
 
 using namespace std;
 
