@@ -10,17 +10,17 @@ using namespace std;
 class Item {
 //declaramos las variables de instancia, como protegidas
 protected:
-  double valor;
+  int id;
   string nombre;
   string tipo_item;
 //métodos serán públicos
 public:
-  Item(): valor(0), nombre(""), tipo_item("") {}; //constructor default
-Item(double val, string nom, string tipo_i):
-  valor(val), nombre(nom), tipo_item(tipo_i) {};
+  Item(): id(0), nombre(""), tipo_item("") {}; //constructor default
+Item(int id_num, string nom, string tipo_i):
+  id(id_num), nombre(nom), tipo_item(tipo_i) {};
 //getters
-  double get_valor() {
-    return valor;
+  double get_id() {
+    return id;
   }
   string get_nombre() {
     return nombre;
@@ -38,10 +38,10 @@ protected:
   string tipo_empleado;
 public:
   Empleado(): Item(0, "","Empleado"){};
- Empleado(double valor, string nombre, double salar, string tipo_e): Item(valor, nombre, "Empleado"),
+ Empleado(int id, string nombre, double salar, string tipo_e): Item(id, nombre, "Empleado"),
  salario_mensual(salar), tipo_empleado(tipo_e) {};
- double get_valor() {
-   return valor;
+ int get_id() {
+   return id;
   }
   string get_nombre() {
     return nombre;
@@ -57,7 +57,7 @@ public:
 string Empleado::to_string() {
 
   stringstream aux;
-  aux << "Valor es " << valor << " tipo de infraestructura " << tipo_item << " es un " <<
+  aux << "ID: " << id << " tipo de infraestructura " << tipo_item << " es un " << tipo_empleado <<
     " su salario mensual es " << salario_mensual << "\n";
   return aux.str();
 }
@@ -68,10 +68,10 @@ protected:
   double costo_mensual_mantenimiento;
 public:
   Inmueble(): Item(0, "", "Inmueble"){};
-Inmueble(double valor, string nombre, string local, double costo_m_m): Item(valor, nombre, "Inmueble"),
+Inmueble(int id, string nombre, string local, double costo_m_m): Item(id, nombre, "Inmueble"),
 localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
-  double get_valor() {
-   return valor;
+  int get_id() {
+   return id;
   }
   string get_nombre() {
     return nombre;
@@ -88,7 +88,7 @@ localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
 string Inmueble::to_string() {
 
   stringstream aux;
-  aux << "Valor es " << valor << " tipo de infraestructura " << tipo_item << " es el inmueble " << nombre <<
+  aux << "ID: " << id << " tipo de infraestructura " << tipo_item << " es el inmueble " << nombre <<
     " su costo mensual de mantenimiento es " << costo_mensual_mantenimiento << "\n";
   return aux.str();
 }
