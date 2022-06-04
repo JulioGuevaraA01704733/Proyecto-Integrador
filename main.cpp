@@ -1,5 +1,5 @@
-#include <iostream>
-#include "club.h"
+#include <iostream> //incuimos iostream para poder hacer uso de cout y cin
+#include "club.h" //incluimos las bibliotecas que declaran los objetos
 #include "item.h"
 using namespace std;
 int main(){
