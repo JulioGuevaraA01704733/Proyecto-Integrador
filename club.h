@@ -7,12 +7,12 @@
 
 #include <sstream>
 
-#include "item.h" //biblioteca con mis objetos a usar
+#include "item.h" //biblioteca que declara los objetos a usar
 
 using namespace std;
 
 const int MAX = 1000; //una constante que define el número máximo de elementos en los arreglos a utilizar
-class Club {
+class Club { 
   private:
   Item * it[MAX]; //es apuntador para que sea dinámico y usar polimorfismo
   int infraestructura;
@@ -29,7 +29,7 @@ class Club {
 
 void Club::crea_ejemplos() {
 
-  //new crea el objeto en tiempo de ejecución para usar polimorfismo
+  //new crea el objeto en el heap para usar polimorfismo
   it[infraestructura] = new Empleado(infraestructura, "Messi", 200000.0, "Jugador");
   infraestructura++;
   it[infraestructura] = new Empleado(infraestructura, "El Bicho", 200000.0, "Jugador");
@@ -41,13 +41,13 @@ void Club::crea_ejemplos() {
 }
 void Club::muestra_items() {
 
-  //Ciclo que recorre el arreglo e imprime cada objeto.
+  //Ciclo que va imprimiendo cada elemento del arreglo
   for (int i = 0; i < infraestructura; i++)
     cout << it[i] -> to_string();
 }
 void Club::muestra_items(string tipo_item) {
 
-  //Ciclo que recorre el arreglo e imprime cada objeto.
+  //Ciclo que va imprimiendo cada elemento del arreglo
   for (int i = 0; i < infraestructura; i++) {
     if (it[i] -> get_tipo_item() == tipo_item)
       cout << it[i] -> to_string();
@@ -55,13 +55,11 @@ void Club::muestra_items(string tipo_item) {
 }
 void Club::agrega_empleado(string nombre, double salario_mensual, string tipo_empleado) {
 
-  //new crea el objeto en tiempo de ejecución para usar polimorfismo
   it[infraestructura] = new Empleado(infraestructura, nombre, salario_mensual, tipo_empleado);
   infraestructura++;
 }
 void Club::agrega_inmueble(string nombre, string localizacion, double costo_mensual_mantenimiento) {
 
-  //new crea el objeto en tiempo de ejecución para usar polimorfismo
   it[infraestructura] = new Inmueble(infraestructura, nombre, localizacion, costo_mensual_mantenimiento);
   infraestructura++;
 }
