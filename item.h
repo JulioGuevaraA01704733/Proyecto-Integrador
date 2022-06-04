@@ -53,6 +53,8 @@ public:
     return tipo_empleado;
    }
     string to_string();
+  //convierte el objeto en string y le agrega el formato para ser impreso
+
 };
 string Empleado::to_string() {
 
@@ -83,7 +85,7 @@ localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
     return costo_mensual_mantenimiento;
     }
     string to_string();
-
+//convierte el objeto en string y le agrega el formato para ser impreso
 };
 string Inmueble::to_string() {
 
