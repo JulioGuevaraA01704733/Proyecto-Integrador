@@ -11,4 +11,6 @@ int main(){
   club.muestra_items("Empleado");
   club.agrega_inmueble("Complejo oficinas 2", "Calle Alfredo Talavera 455", 460.5);
   club.muestra_items("Inmueble");
+  club.agrega_patrocinio("Coca Cola", 5000000);
+  club.muestra_items("Patrocinio");
 }
