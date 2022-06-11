@@ -28,7 +28,7 @@ Item(int id_num, string nom, string tipo_i):
   string get_tipo_item() {
     return tipo_item;
   }
-    virtual string to_string() = 0;
+    virtual string to_string() = 0; // es método abstacto que se reescribirá dependiendo la subclase 
 
 };
 //Declaramos objeto empleado que hereda de Item
