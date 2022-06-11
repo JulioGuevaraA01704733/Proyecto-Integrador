@@ -94,4 +94,29 @@ string Inmueble::to_string() {
     " su costo mensual de mantenimiento es " << costo_mensual_mantenimiento << "\n";
   return aux.str();
 }
+class Patrocinio: public Item{
+protected:
+  double valor_anual;
+public:
+  Patrocinio(): Item(0, "", "Patrocinio"){};
+Patrocinio(int id, string nombre, double valor_a): Item(id, nombre, "Patrocinio"),
+valor_anual(valor_a){};
+int get_id() {
+ return id;
+}
+string get_nombre() {
+  return nombre;
+}
+double get_valor_anual(){
+  return valor_anual;
+}
+string to_string();
+};
+string Patrocinio::to_string() {
+
+  stringstream aux;
+  aux << "ID: " << id << ". Activo del tipo: " << tipo_item << ", de la marca " << nombre <<
+    ", con un valor anual de " << valor_anual << " Euros. \n";
+  return aux.str();
+}
 #endif
