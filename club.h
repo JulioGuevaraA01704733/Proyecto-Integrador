@@ -25,6 +25,7 @@ class Club {
   void muestra_items(string tipo_item);
   void agrega_empleado(string nombre, double salario_mensual, string tipo_empleado);
   void agrega_inmueble(string nombre, string localizacion, double costo_mensual_mantenimiento);
+  void agrega_patrocinio(string nombre, double valor_anual);
 };
 
 void Club::crea_ejemplos() {
@@ -61,6 +62,12 @@ void Club::agrega_empleado(string nombre, double salario_mensual, string tipo_em
 void Club::agrega_inmueble(string nombre, string localizacion, double costo_mensual_mantenimiento) {
 
   it[infraestructura] = new Inmueble(infraestructura, nombre, localizacion, costo_mensual_mantenimiento);
+  infraestructura++;
+}
+void Club::agrega_patrocinio(string nombre, double valor_anual) {
+
+  //new crea el objeto en tiempo de ejecución para usar polimorfismo
+  it[infraestructura] = new Patrocinio(infraestructura, nombre, valor_anual);
   infraestructura++;
 }
 #endif
