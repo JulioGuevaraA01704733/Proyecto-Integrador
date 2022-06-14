@@ -6,6 +6,8 @@ Proyecto sobre un equipo o "club" de fútbol, donde sus "items" son la infraestr
 
 El programa guarda la información del club y calcula el balance anual, considerando los gastos y los ingresos que se dan a través de estos 3 elementos.
 
+Se utilizó este tema por la versatilidad que ofrece, actuando como una empresa mientras maneja elementos variados, lo cual ayuda al implementar los temas. 
+
 ## Cambios:
 
 Para acreditar las subcompetencias de herencia, modificadores de acceso y sobreescritura de métodos, se implementó el main.cpp, ya que en el avance correspondiente a dichas subcompetencias, no existía uno, por lo tanto, no se podía correr el programa y evaluar.
