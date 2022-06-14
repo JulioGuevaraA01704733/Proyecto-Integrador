@@ -119,12 +119,4 @@ string Patrocinio::to_string() {
     ", con un valor anual de " << valor_anual << " Euros. \n";
   return aux.str();
 }
-class Jugador: public Empleado {
-protected:
-  string posicion;
-public:
-  Jugador(): Empleado(0, "","Empleado",0.0,"Jugador"){};
- Jugador(int id, string nombre, double salario_mensual, string pos): Empleado(id, nombre, "Empleado", salario_mensual,  "Jugador"),
- posicion(pos) {};
-};
 #endif
