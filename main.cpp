@@ -28,7 +28,7 @@ int main(){
       case 1:
         cout << "Agregando empleado\n";
         cout << "Nombre: \n";
-        std::getline(std::cin >> ws, nombre_nuevo_empleado);
+        std::getline(std::cin >> ws, nombre_nuevo_empleado); //utilizamos esta sintaxis para que no haya problema al ingresar strings con espacios
         cout << "Salario mensual: \n";
         cin >> salario_nuevo_empleado;
         cout << "Tipo de empleado: \n";
