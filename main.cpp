@@ -14,7 +14,7 @@ int main(){
   int opcion; 
   string nombre_nuevo_empleado;
   double salario_nuevo_empleado;
-  string tipo_nuevo_empleado;
+  int opcion_tipo_nuevo_empleado;
   string nombre_nuevo_inmueble;
   string localizacion_nuevo_inmueble;
   double mantenimiento_nuevo_inmueble;
@@ -32,8 +32,28 @@ int main(){
         cout << "Salario mensual: \n";
         cin >> salario_nuevo_empleado;
         cout << "Tipo de empleado: \n";
-        cin >> tipo_nuevo_empleado;
-        club.agrega_empleado(nombre_nuevo_empleado, salario_nuevo_empleado, tipo_nuevo_empleado);
+        cout << "Presiona 1 si es jugador\n";
+        cout << "Presiona 2 si es entrenador\n";
+        cout << "Presiona 3 si es ejecutivo\n";
+        cout << "Presiona 4 si es trabajador de oficina\n";
+        cin >> opcion_tipo_nuevo_empleado;
+        switch (opcion_tipo_nuevo_empleado){
+          case 1:
+            club.agrega_empleado(nombre_nuevo_empleado, salario_nuevo_empleado, "Jugador");
+          break;
+          case 2:
+            club.agrega_empleado(nombre_nuevo_empleado, salario_nuevo_empleado, "Entrenador");
+          break;
+          case 3:
+            club.agrega_empleado(nombre_nuevo_empleado, salario_nuevo_empleado, "Ejecutivo");
+          break;
+          case 4:
+            club.agrega_empleado(nombre_nuevo_empleado, salario_nuevo_empleado, "Oficinista");
+          break;
+          default:
+            cout << "Invalido, ingrese una opcion existente\n";
+          break;
+        }
         cout << "Empleado agregado\n";
         cout << "Ingrese una nueva opcion\n";
         break;
