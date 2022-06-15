@@ -4,13 +4,14 @@
 using namespace std;
 int main(){
   Club club;
-  cout << "Base de datos del Club | Menu Principal\n";
+  cout << "Base de datos del Club | Menu Principal\n"; //se imprime un menu con las opciones que tiene ofrece el programa
   cout << "Presione 1 para agregar empleado \n";
   cout << "Presione 2 para agregar inmueble \n";
   cout << "Presione 3 para agregar patrocinio \n";
   cout << "Presione 4 para mostrar items \n";
   cout << "Presione 5 para salir del programa \n";
-  int opcion;
+  //declaramos las variables que se van a utilizar para el funcionamiento del menu (el uso de las funciones a traves de este)
+  int opcion; 
   string nombre_nuevo_empleado;
   double salario_nuevo_empleado;
   string tipo_nuevo_empleado;
@@ -20,7 +21,7 @@ int main(){
   string marca_nuevo_patrocinio;
   double valor_nuevo_patrocinio;
   int tipo_a_mostrar;
-  bool trabajando = true;
+  bool trabajando = true; 
   while (trabajando) {
     cin >> opcion;
     switch (opcion) {
