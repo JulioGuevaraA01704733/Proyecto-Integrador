@@ -19,7 +19,6 @@ class Club {
   //declaramos constructor y otros métodos
   public:
   Club(): infraestructura(0) {}; //constructor por default
-  void crea_ejemplos();
   void muestra_empleados();
   void muestra_items();
   void muestra_items(string tipo_item);
@@ -27,21 +26,7 @@ class Club {
   void agrega_inmueble(string nombre, string localizacion, double costo_mensual_mantenimiento);
   void agrega_patrocinio(string nombre, double valor_anual);
 };
-
-void Club::crea_ejemplos() {
-
-  //new crea el objeto en el heap para usar polimorfismo
-  it[infraestructura] = new Empleado(infraestructura, "Messi", 200000.0, "Jugador");
-  infraestructura++;
-  it[infraestructura] = new Empleado(infraestructura, "El Bicho", 200000.0, "Jugador");
-  infraestructura++;
-  it[infraestructura] = new Inmueble(infraestructura, "Estadio", "Boulevard Checo Pérez 511", 1000);
-  infraestructura++;
-  it[infraestructura] = new Inmueble(infraestructura, "Complejo oficinas 1", "Calle Martin Luther King Jr 323", 500.5);
-  infraestructura++;
-}
 void Club::muestra_items() {
-
   //Ciclo que va imprimiendo cada elemento del arreglo
   for (int i = 0; i < infraestructura; i++)
     cout << it[i] -> to_string();
