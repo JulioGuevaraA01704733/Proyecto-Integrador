@@ -96,15 +96,12 @@ int main(){
         switch (tipo_a_mostrar) {
           case 1:
             club.muestra_activos("Empleado");
-            menu();
           break;
           case 2:
             club.muestra_activos("Inmueble");
-            menu();
           break;
           case 3:
             club.muestra_activos("Patrocinio");
-            menu();
           break;
           default:
             cout << "Invalido, ingrese una opcion existente\n";
