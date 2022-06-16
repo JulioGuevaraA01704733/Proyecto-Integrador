@@ -119,7 +119,7 @@ int main(){
         menu();
       break;
       case 6:
-        cout << "Calcular balance anual del club \n";
+        cout << "Balance anual del club: ";
         cout << club.calcula_balance_anual() << " dolares. \n";
         menu();
        break;
