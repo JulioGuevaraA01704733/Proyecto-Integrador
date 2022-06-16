@@ -2,15 +2,19 @@
 #include "club.h" //incluimos las bibliotecas que declaran los objetos
 #include "item.h"
 using namespace std;
-int main(){
-  Club club;
-  cout << "Base de datos del Club | Menu Principal\n"; //se imprime un menu con las opciones que tiene ofrece el programa
+void menu(){
   cout << "Presione 1 para agregar empleado \n";
   cout << "Presione 2 para agregar inmueble \n";
   cout << "Presione 3 para agregar patrocinio \n";
   cout << "Presione 4 para mostrar activos de un tipo específico \n";
   cout << "Presione 5 para mostrar todos los activos \n";
   cout << "Presione 6 para salir del programa \n";
+}
+//imprime un menu con las opciones que ofrece el programa
+int main(){
+  Club club;
+  cout << "Base de datos del Club | Menu Principal\n"; //se imprime un menu con las opciones que tiene ofrece el programa
+  menu();
   //declaramos las variables que se van a utilizar para el funcionamiento del menu (el uso de las funciones a traves de este
   //y los casos para los switches)
   int opcion; 
@@ -54,10 +58,11 @@ int main(){
           break;
           default:
             cout << "Invalido, ingrese una opcion existente\n";
+            menu();
           break;
         }
         cout << "Empleado agregado\n";
-        cout << "Ingrese una nueva opcion\n";
+        menu();
         break;
       case 2:
         cout << "Agregando inmueble\n";
@@ -69,7 +74,7 @@ int main(){
         cin >> mantenimiento_nuevo_inmueble;
         club.agrega_inmueble(nombre_nuevo_inmueble, localizacion_nuevo_inmueble, mantenimiento_nuevo_inmueble);
         cout << "Inmueble agregado\n";
-        cout << "Ingrese una nueva opcion\n";
+        menu();
         break;
       case 3:
         cout << "Agregando patrocinio\n";
@@ -79,10 +84,10 @@ int main(){
         cin >> valor_nuevo_patrocinio;
         club.agrega_patrocinio(marca_nuevo_patrocinio, valor_nuevo_patrocinio);
         cout << "Patrocinio agregado\n";
-        cout << "Ingrese una nueva opcion\n";
+        menu();
         break;
       case 4:
-        cout << "Mostrar items\n";
+        cout << "Mostrar activos\n";
         cout << "Presione 1 para mostrar empleados\n";
         cout << "Presione 2 para mostrar inmuebles\n";
         cout << "Presione 3 para mostrar patrocinios\n";
@@ -90,23 +95,27 @@ int main(){
         switch (tipo_a_mostrar) {
           case 1:
             club.muestra_items("Empleado");
+            menu();
           break;
           case 2:
             club.muestra_items("Inmueble");
+            menu();
           break;
           case 3:
             club.muestra_items("Patrocinio");
+            menu();
           break;
           default:
             cout << "Invalido, ingrese una opcion existente\n";
+            menu();
           break;
         }
-        cout << "Ingrese una nueva opcion\n";
+        menu();
         break;
       case 5:
         cout << "Mostrando todos los activos\n";
         club.muestra_items();
-        cout << "Ingrese una nueva opcion\n";
+        menu();
       break;
       case 6:
         cout << "Programa cerrado\n";
@@ -114,6 +123,7 @@ int main(){
         break;
       default:
         cout << "Invalido, ingrese una opcion existente\n";
+        menu();
         break;
     }
   }
