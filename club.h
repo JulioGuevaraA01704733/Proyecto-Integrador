@@ -28,6 +28,7 @@ class Club {
   void agrega_ejecutivo(string nombre, double salario_mensual);
   void agrega_inmueble(string nombre, string localizacion, double costo_mensual_mantenimiento);
   void agrega_patrocinio(string nombre, double valor_anual);
+  double calcula_balance_anual();
 };
 void Club::muestra_activos() {
   //Ciclo que va imprimiendo cada elemento del arreglo
@@ -69,5 +70,26 @@ void Club::agrega_patrocinio(string nombre, double valor_anual) {
   //new crea el objeto en tiempo de ejecución para usar polimorfismo
   it[infraestructura] = new Patrocinio(infraestructura, nombre, valor_anual);
   infraestructura++;
+}
+double Club::calcula_balance_anual() {
+  double balance = 0;
+  Empleado *ep = NULL;
+  Inmueble *ip = NULL;
+  Patrocinio *pp = NULL; //No apuntan a nada, hasta que les damos valor dentro de la estructura condicional
+  for (int i = 0; i < infraestructura; i++) {
+    if (it[i] -> get_tipo_item() == "Empleado") { //creamos un caso para cada clase hija de la clase activo
+      ep = (Empleado*) it[i]; //volvemos el apuntador de la clase padre a un apuntador de la clase hija
+      balance -= ep -> pago_anual_con_bonus();
+    }
+    else if (it[i] -> get_tipo_item() == "Inmueble"){
+      ip = (Inmueble*) it[i];
+      balance -= ip -> get_costo_mensual_mantenimiento()*12;
+    }
+    else if (it[i] -> get_tipo_item() == "Patrocinio"){
+      pp = (Patrocinio*) it[i];
+      balance += pp -> get_valor_anual();
+    }
+  }
+return balance;
 }
 #endif
