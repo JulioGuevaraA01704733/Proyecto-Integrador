@@ -94,15 +94,15 @@ int main(){
         cin >> tipo_a_mostrar;
         switch (tipo_a_mostrar) {
           case 1:
-            club.muestra_items("Empleado");
+            club.muestra_activos("Empleado");
             menu();
           break;
           case 2:
-            club.muestra_items("Inmueble");
+            club.muestra_activos("Inmueble");
             menu();
           break;
           case 3:
-            club.muestra_items("Patrocinio");
+            club.muestra_activos("Patrocinio");
             menu();
           break;
           default:
@@ -114,7 +114,7 @@ int main(){
         break;
       case 5:
         cout << "Mostrando todos los activos\n";
-        club.muestra_items();
+        club.muestra_activos();
         menu();
       break;
       case 6:
