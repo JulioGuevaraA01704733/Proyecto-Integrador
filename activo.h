@@ -122,6 +122,8 @@ string Patrocinio::to_string() {
 //subclases de empleado que no tienen ningun atributo nuevo
 class Jugador: public Empleado {
 public:
+  Jugador(): Empleado(0, "", 0, "Jugador"){};
+ Jugador(int id, string nombre, double salar): Empleado(id, nombre, salar, "Jugador") {};
   double pago_anual_con_bonus() {
     return salario_mensual*12.15;
 //la funcion se sobreescribe en cada subclase para reflejar el bonus especifico a cada tipo de empleado
@@ -129,18 +131,24 @@ public:
 };
 class Entrenador: public Empleado {
 public:
+  Entrenador(): Empleado(0, "", 0, "Entrenador"){};
+ Entrenador(int id, string nombre, double salar): Empleado(id, nombre, salar, "Entrenador") {};
   double pago_anual_con_bonus() {
     return salario_mensual*12.1;
   }
 };
 class Ejecutivo: public Empleado {
 public:
+  Ejecutivo(): Empleado(0, "", 0, "Ejecutivo"){};
+ Ejecutivo(int id, string nombre, double salar): Empleado(id, nombre, salar, "Ejecutivo") {};
   double pago_anual_con_bonus() {
     return salario_mensual*12.25; //ejecutivos
   }
 };
 class Oficinista: public Empleado {
 public:
+  Oficinista(): Empleado(0, "", 0, "Oficinista"){};
+ Oficinista(int id, string nombre, double salar): Empleado(id, nombre, salar, "Oficinista") {};
   double pago_anual_con_bonus() {
     return salario_mensual*12.05;
   }
