@@ -1,5 +1,5 @@
-#ifndef ITEM_H_
-#define ITEM_H_
+#ifndef ACTIVO_H_
+#define ACTIVO_H_
 
 #include <string>
 
@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Item {
+class Activo {
 //declaramos las variables de instancia, como protegidas
 protected:
   int id;
@@ -15,9 +15,9 @@ protected:
   string tipo_item;
 //métodos serán públicos
 public:
-  Item(): id(0), nombre(""), tipo_item("") {}; //constructor default
-Item(int id_num, string nom, string tipo_i):
-  id(id_num), nombre(nom), tipo_item(tipo_i) {};
+  Activo(): id(0), nombre(""), tipo_activo("") {}; //constructor default
+Activo(int id_num, string nom, string tipo_a):
+  id(id_num), nombre(nom), tipo_activo(tipo_a) {};
 //getters
   double get_id() {
     return id;
@@ -25,20 +25,19 @@ Item(int id_num, string nom, string tipo_i):
   string get_nombre() {
     return nombre;
   }
-  string get_tipo_item() {
-    return tipo_item;
+  string get_tipo_activo() {
+    return tipo_activo;
   }
     virtual string to_string() = 0; // es método abstacto que se reescribirá dependiendo la subclase 
-
 };
-//Declaramos objeto empleado que hereda de Item
-class Empleado: public Item  {
+//Declaramos objeto empleado que hereda de Activo
+class Empleado: public Activo  {
 protected:
   double salario_mensual;
   string tipo_empleado;
 public:
-  Empleado(): Item(0, "","Empleado"){};
- Empleado(int id, string nombre, double salar, string tipo_e): Item(id, nombre, "Empleado"),
+  Empleado(): Activo(0, "","Empleado"){};
+ Empleado(int id, string nombre, double salar, string tipo_e): Activo(id, nombre, "Empleado"),
  salario_mensual(salar), tipo_empleado(tipo_e) {};
  int get_id() {
    return id;
@@ -59,19 +58,19 @@ public:
 string Empleado::to_string() {
 
   stringstream aux;
-  aux << "ID: " << id << " . Activo del tipo: " << tipo_item << ". Nombre: " << nombre <<
+  aux << "ID: " << id << " . Activo del tipo: " << tipo_activo << ". Nombre: " << nombre <<
   ". Tipo de empleado: " << tipo_empleado << ". Salario mensual: " << salario_mensual << " dolares. \n";
    return aux.str();
 
 }
-//Declaramos objeto inmueble que hereda de Item
-class Inmueble: public Item {
+//Declaramos objeto inmueble que hereda de Activo
+class Inmueble: public Activo {
 protected:
   string localizacion;
   double costo_mensual_mantenimiento;
 public:
-  Inmueble(): Item(0, "", "Inmueble"){};
-Inmueble(int id, string nombre, string local, double costo_m_m): Item(id, nombre, "Inmueble"),
+  Inmueble(): Activo(0, "", "Inmueble"){};
+Inmueble(int id, string nombre, string local, double costo_m_m): Activo(id, nombre, "Inmueble"),
 localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
   int get_id() {
    return id;
@@ -91,16 +90,16 @@ localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
 string Inmueble::to_string() {
 
   stringstream aux;
-  aux << "ID: " << id << ". Activo del tipo: " << tipo_item << ". Es el inmueble llamado " << nombre << " . Ubicado en " << localizacion <<
+  aux << "ID: " << id << ". Activo del tipo: " << tipo_activo << ". Es el inmueble llamado " << nombre << " . Ubicado en " << localizacion <<
     ". Costo mensual de mantenimiento: " << costo_mensual_mantenimiento << " dolares.\n";
   return aux.str();
 }
-class Patrocinio: public Item{
+class Patrocinio: public Activo{
 protected:
   double valor_anual;
 public:
-  Patrocinio(): Item(0, "", "Patrocinio"){};
-Patrocinio(int id, string nombre, double valor_a): Item(id, nombre, "Patrocinio"),
+  Patrocinio(): Activo(0, "", "Patrocinio"){};
+Patrocinio(int id, string nombre, double valor_a): Activo(id, nombre, "Patrocinio"),
 valor_anual(valor_a){};
 int get_id() {
  return id;
@@ -116,7 +115,7 @@ string to_string();
 string Patrocinio::to_string() {
 
   stringstream aux;
-  aux << "ID: " << id << ". Activo del tipo: " << tipo_item << ", de la marca " << nombre <<
+  aux << "ID: " << id << ". Activo del tipo: " << tipo_activo << ", de la marca " << nombre <<
     ", con un valor anual de " << valor_anual << " dolares. \n";
   return aux.str();
 }
