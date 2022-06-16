@@ -21,7 +21,11 @@ class Club {
   Club(): infraestructura(0) {}; //constructor por default
   void muestra_items();
   void muestra_items(string tipo_item);
-  void agrega_empleado(string nombre, double salario_mensual, string tipo_empleado);
+  //se crea una funcion de agregar para cada tipo de empleado
+  void agrega_jugador(string nombre, double salario_mensual);
+  void agrega_entrenador(string nombre, double salario_mensual);
+  void agrega_oficinista(string nombre, double salario_mensual);
+  void agrega_ejecutivo(string nombre, double salario_mensual);
   void agrega_inmueble(string nombre, string localizacion, double costo_mensual_mantenimiento);
   void agrega_patrocinio(string nombre, double valor_anual);
 };
@@ -38,9 +42,21 @@ void Club::muestra_items(string tipo_item) {
       cout << it[i] -> to_string();
   }
 }
-void Club::agrega_empleado(string nombre, double salario_mensual, string tipo_empleado) {
-
-  it[infraestructura] = new Empleado(infraestructura, nombre, salario_mensual, tipo_empleado);
+//se crea una funcion de agregar para cada tipo de empleado
+void Club::agrega_jugador(string nombre, double salario_mensual) {
+  it[infraestructura] = new Jugador(infraestructura, nombre, salario_mensual);
+  infraestructura++;
+}
+void Club::agrega_entrenador(string nombre, double salario_mensual) {
+  it[infraestructura] = new Entrenador(infraestructura, nombre, salario_mensual);
+  infraestructura++;
+}
+void Club::agrega_oficinista(string nombre, double salario_mensual) {
+  it[infraestructura] = new Oficinista(infraestructura, nombre, salario_mensual);
+  infraestructura++;
+}
+void Club::agrega_ejecutivo(string nombre, double salario_mensual) {
+  it[infraestructura] = new Ejecutivo(infraestructura, nombre, salario_mensual);
   infraestructura++;
 }
 void Club::agrega_inmueble(string nombre, string localizacion, double costo_mensual_mantenimiento) {
