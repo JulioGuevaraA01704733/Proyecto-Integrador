@@ -36,7 +36,7 @@ void Club::muestra_activos() {
 }
 void Club::muestra_activos(string tipo_activo) {
 
-  //Ciclo que va imprimiendo cada elemento del arreglo
+  //Ciclo que va imprimiendo cada elemento del arreglo, con la condicion de que el tipo de activo sea el que le especificamos
   for (int i = 0; i < infraestructura; i++) {
     if (it[i] -> get_tipo_activo() == tipo_activo)
       cout << it[i] -> to_string();
