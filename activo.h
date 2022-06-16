@@ -12,7 +12,7 @@ class Activo {
 protected:
   int id;
   string nombre;
-  string tipo_item;
+  string tipo_activo;
 //métodos serán públicos
 public:
   Activo(): id(0), nombre(""), tipo_activo("") {}; //constructor default
