@@ -104,7 +104,7 @@ int main(){
         cout << "Ingrese una nueva opcion\n";
         break;
       case 5:
-        cout << "Mostrando todos los activos";
+        cout << "Mostrando todos los activos\n";
         club.muestra_items();
         cout << "Ingrese una nueva opcion\n";
       break;
