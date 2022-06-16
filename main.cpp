@@ -8,9 +8,11 @@ int main(){
   cout << "Presione 1 para agregar empleado \n";
   cout << "Presione 2 para agregar inmueble \n";
   cout << "Presione 3 para agregar patrocinio \n";
-  cout << "Presione 4 para mostrar items \n";
-  cout << "Presione 5 para salir del programa \n";
-  //declaramos las variables que se van a utilizar para el funcionamiento del menu (el uso de las funciones a traves de este)
+  cout << "Presione 4 para mostrar activos de un tipo específico \n";
+  cout << "Presione 5 para mostrar todos los activos \n";
+  cout << "Presione 6 para salir del programa \n";
+  //declaramos las variables que se van a utilizar para el funcionamiento del menu (el uso de las funciones a traves de este
+  //y los casos para los switches)
   int opcion; 
   string nombre_nuevo_empleado;
   double salario_nuevo_empleado;
@@ -102,6 +104,11 @@ int main(){
         cout << "Ingrese una nueva opcion\n";
         break;
       case 5:
+        cout << "Mostrando todos los activos"
+        club.muestra_items();
+        cout << "Ingrese una nueva opcion\n";
+      break;
+      case 6:
         cout << "Programa cerrado\n";
         trabajando = !trabajando;
         break;
