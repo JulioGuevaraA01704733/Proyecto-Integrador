@@ -19,7 +19,6 @@ class Club {
   //declaramos constructor y otros métodos
   public:
   Club(): infraestructura(0) {}; //constructor por default
-  void muestra_empleados();
   void muestra_items();
   void muestra_items(string tipo_item);
   void agrega_empleado(string nombre, double salario_mensual, string tipo_empleado);
