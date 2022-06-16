@@ -91,7 +91,7 @@ localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
 string Inmueble::to_string() {
 
   stringstream aux;
-  aux << "ID: " << id << ". Activo del tipo: " << tipo_item << ". Es el inmueble llamado " << nombre <<
+  aux << "ID: " << id << ". Activo del tipo: " << tipo_item << ". Es el inmueble llamado " << nombre << " . Ubicado en " << localizacion <<
     ". Costo mensual de mantenimiento: " << costo_mensual_mantenimiento << " dolares.\n";
   return aux.str();
 }
