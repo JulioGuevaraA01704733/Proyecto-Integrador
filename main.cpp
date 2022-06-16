@@ -6,7 +6,7 @@ void menu(){
   cout << "Presione 1 para agregar empleado \n";
   cout << "Presione 2 para agregar inmueble \n";
   cout << "Presione 3 para agregar patrocinio \n";
-  cout << "Presione 4 para mostrar activos de un tipo específico \n";
+  cout << "Presione 4 para mostrar activos de un tipo especifico \n";
   cout << "Presione 5 para mostrar todos los activos \n";
   cout << "Presione 6 para salir del programa \n";
 }
