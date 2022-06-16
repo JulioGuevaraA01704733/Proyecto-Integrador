@@ -1,6 +1,6 @@
 #include <iostream> //incuimos iostream para poder hacer uso de cout y cin
 #include "club.h" //incluimos las bibliotecas que declaran los objetos
-#include "item.h"
+#include "activo.h"
 using namespace std;
 void menu(){
   cout << "Presione 1 para agregar empleado \n";
