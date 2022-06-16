@@ -59,9 +59,10 @@ public:
 string Empleado::to_string() {
 
   stringstream aux;
-  aux << "ID: " << id << " tipo de infraestructura " << tipo_item << " es un " << tipo_empleado <<
-    " su salario mensual es " << salario_mensual << "\n";
-  return aux.str();
+  aux << "ID: " << id << " . Activo del tipo: " << tipo_item << ". Nombre: " << nombre <<
+  ". Tipo de empleado: " << tipo_empleado << ". Salario mensual: " << salario_mensual << " dolares. \n";
+   return aux.str();
+
 }
 //Declaramos objeto inmueble que hereda de Item
 class Inmueble: public Item {
@@ -90,8 +91,8 @@ localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
 string Inmueble::to_string() {
 
   stringstream aux;
-  aux << "ID: " << id << " tipo de infraestructura " << tipo_item << " es el inmueble " << nombre <<
-    " su costo mensual de mantenimiento es " << costo_mensual_mantenimiento << "\n";
+  aux << "ID: " << id << ". Activo del tipo: " << tipo_item << ". Es el inmueble llamado " << nombre <<
+    ". Costo mensual de mantenimiento: " << costo_mensual_mantenimiento << " dolares.\n";
   return aux.str();
 }
 class Patrocinio: public Item{
@@ -116,7 +117,32 @@ string Patrocinio::to_string() {
 
   stringstream aux;
   aux << "ID: " << id << ". Activo del tipo: " << tipo_item << ", de la marca " << nombre <<
-    ", con un valor anual de " << valor_anual << " Euros. \n";
+    ", con un valor anual de " << valor_anual << " dolares. \n";
   return aux.str();
 }
+class Jugador: public Empleado {
+public:
+  double pago_anual_con_bonus() {
+    return salario_mensual*12.15;
+//la funcion se sobreescribe en cada subclase para reflejar el bonus especifico a cada tipo de empleado
+  }
+};
+class Entrenador: public Empleado {
+public:
+  double pago_anual_con_bonus() {
+    return salario_mensual*12.1;
+  }
+};
+class Ejecutivo: public Empleado {
+public:
+  double pago_anual_con_bonus() {
+    return salario_mensual*12.25; //ejecutivos
+  }
+};
+class Oficinista: public Empleado {
+public:
+  double pago_anual_con_bonus() {
+    return salario_mensual*12.05;
+  }
+};
 #endif
