@@ -8,7 +8,8 @@ void menu(){
   cout << "Presione 3 para agregar patrocinio \n";
   cout << "Presione 4 para mostrar activos de un tipo especifico \n";
   cout << "Presione 5 para mostrar todos los activos \n";
-  cout << "Presione 6 para salir del programa \n";
+  cout << "Presione 6 para calcular el balance anual del club \n";
+  cout << "Presione 7 para salir del programa \n";
 }
 //imprime un menu con las opciones que ofrece el programa
 int main(){
@@ -118,6 +119,11 @@ int main(){
         menu();
       break;
       case 6:
+        cout << "Calcular balance anual del club \n";
+        cout << club.calcula_balance_anual() << " dolares. \n";
+        menu();
+       break;
+      case 7:
         cout << "Programa cerrado\n";
         trabajando = !trabajando;
         break;
