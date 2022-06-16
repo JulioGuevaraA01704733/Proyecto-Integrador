@@ -27,28 +27,28 @@ int main(){
     switch (opcion) {
       case 1:
         cout << "Agregando empleado\n";
-        cout << "Nombre: \n";
-        std::getline(std::cin >> ws, nombre_nuevo_empleado); //utilizamos esta sintaxis para que no haya problema al ingresar strings con espacios
-        cout << "Salario mensual: \n";
-        cin >> salario_nuevo_empleado;
         cout << "Tipo de empleado: \n";
         cout << "Presiona 1 si es jugador\n";
         cout << "Presiona 2 si es entrenador\n";
         cout << "Presiona 3 si es ejecutivo\n";
         cout << "Presiona 4 si es trabajador de oficina\n";
         cin >> opcion_tipo_nuevo_empleado;
+        cout << "Nombre: \n";
+        std::getline(std::cin >> ws, nombre_nuevo_empleado);
+        cout << "Salario mensual: \n";
+        cin >> salario_nuevo_empleado;
         switch (opcion_tipo_nuevo_empleado){
           case 1:
-            club.agrega_empleado(nombre_nuevo_empleado, salario_nuevo_empleado, "Jugador");
+            club.agrega_jugador(nombre_nuevo_empleado, salario_nuevo_empleado);
           break;
           case 2:
-            club.agrega_empleado(nombre_nuevo_empleado, salario_nuevo_empleado, "Entrenador");
+            club.agrega_entrenador(nombre_nuevo_empleado, salario_nuevo_empleado);
           break;
           case 3:
-            club.agrega_empleado(nombre_nuevo_empleado, salario_nuevo_empleado, "Ejecutivo");
+            club.agrega_ejecutivo(nombre_nuevo_empleado, salario_nuevo_empleado);
           break;
           case 4:
-            club.agrega_empleado(nombre_nuevo_empleado, salario_nuevo_empleado, "Oficinista");
+            club.agrega_oficinista(nombre_nuevo_empleado, salario_nuevo_empleado);
           break;
           default:
             cout << "Invalido, ingrese una opcion existente\n";
