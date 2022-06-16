@@ -45,9 +45,8 @@ public:
   string get_nombre() {
     return nombre;
   }
-  double pago_mensual() {
-    return salario_mensual;
-  }
+  virtual double pago_anual_con_bonus() = 0;
+  //es abstracta ya que no se va a usar en esta clase padre
   string get_tipo_empleado() {
     return tipo_empleado;
    }
