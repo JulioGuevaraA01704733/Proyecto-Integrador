@@ -34,7 +34,7 @@ int main(){
         cout << "Presiona 4 si es trabajador de oficina\n";
         cin >> opcion_tipo_nuevo_empleado;
         cout << "Nombre: \n";
-        std::getline(std::cin >> ws, nombre_nuevo_empleado);
+        std::getline(std::cin >> ws, nombre_nuevo_empleado); //para que no haya problema al poner espacios
         cout << "Salario mensual: \n";
         cin >> salario_nuevo_empleado;
         switch (opcion_tipo_nuevo_empleado){
