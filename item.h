@@ -120,6 +120,7 @@ string Patrocinio::to_string() {
     ", con un valor anual de " << valor_anual << " dolares. \n";
   return aux.str();
 }
+//subclases de empleado que no tienen ningun atributo nuevo
 class Jugador: public Empleado {
 public:
   double pago_anual_con_bonus() {
