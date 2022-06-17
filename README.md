@@ -2,7 +2,7 @@
 TC1030 Prog. Orientada a Objetos
 
 
-Proyecto sobre un equipo o "club" de fútbol, donde sus "items" son la infraestructura, es decir, los empleados en su nómina, inmuebles y patrocionios que tiene.
+Proyecto sobre un equipo o "club" de fútbol, donde sus "activos" son la infraestructura, es decir, los empleados en su nómina, inmuebles y patrocionios que tiene.
 
 El programa guarda la información del club y calcula el balance anual, considerando los gastos y los ingresos que se dan a través de estos 3 elementos.
 
