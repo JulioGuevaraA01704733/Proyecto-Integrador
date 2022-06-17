@@ -1,5 +1,5 @@
 /*
- * Proyecto Club main
+ * Proyecto Club clase Activo y todas sus sub-clases
  * Julio Eugenio Guevara Galvan
  * A01704733
  * 17/06/2022
