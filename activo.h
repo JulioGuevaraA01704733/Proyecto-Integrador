@@ -8,8 +8,8 @@
 using namespace std;
 
 class Activo {
-//declaramos las variables de instancia, como privadas
-private:
+//declaramos las variables de instancia, como protegidas
+protected:
   int id;
   string nombre;
   string tipo_activo;
@@ -32,7 +32,7 @@ Activo(int id_num, string nom, string tipo_a):
 };
 //Declaramos objeto empleado que hereda de Activo
 class Empleado: public Activo  {
-private:
+protected:
   double salario_mensual;
   string tipo_empleado;
 public:
