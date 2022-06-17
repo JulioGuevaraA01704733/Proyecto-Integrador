@@ -95,12 +95,15 @@ int main(){
         cin >> tipo_a_mostrar;
         switch (tipo_a_mostrar) {
           case 1:
+            cout << "Mostrando empleados\n";
             club.muestra_activos("Empleado");
           break;
           case 2:
+            cout << "Mostrando inmuebles\n";
             club.muestra_activos("Inmueble");
           break;
           case 3:
+            cout << "Mostrando patrocinios\n";
             club.muestra_activos("Patrocinio");
           break;
           default:
