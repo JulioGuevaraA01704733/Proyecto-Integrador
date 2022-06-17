@@ -1,3 +1,9 @@
+/*
+ * Proyecto Club clase club
+ * Julio Eugenio Guevara Galvan
+ * A01704733
+ * 17/06/2022
+ */
 #ifndef CLUB_H_
 #define CLUB_H_
 
