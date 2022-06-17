@@ -94,7 +94,7 @@ string Inmueble::to_string() {
   return aux.str();
 }
 class Patrocinio: public Activo{
-protected:
+private:
   double valor_anual;
 public:
   Patrocinio(): Activo(0, "", "Patrocinio"){};
