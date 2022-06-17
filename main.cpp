@@ -1,3 +1,9 @@
+/*
+ * Proyecto Club main
+ * Julio Eugenio Guevara Galvan
+ * A01704733
+ * 17/06/2022
+ */
 #include <iostream> //incuimos iostream para poder hacer uso de cout y cin
 #include "club.h" //incluimos las bibliotecas que declaran los objetos
 #include "activo.h"
