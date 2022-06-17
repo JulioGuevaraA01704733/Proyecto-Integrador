@@ -57,7 +57,7 @@ public:
 string Empleado::to_string() {
 
   stringstream aux;
-  aux << "ID: " << id << " . Activo del tipo: " << tipo_activo << ". Nombre: " << nombre <<
+  aux << "ID: " << id << " . Nombre: " << nombre <<
   ". Tipo de empleado: " << tipo_empleado << ". Salario mensual: " << salario_mensual << " dolares. \n";
    return aux.str();
 
@@ -89,7 +89,7 @@ localizacion(local), costo_mensual_mantenimiento(costo_m_m) {};
 string Inmueble::to_string() {
 
   stringstream aux;
-  aux << "ID: " << id << ". Activo del tipo: " << tipo_activo << ". Es el inmueble llamado " << nombre << " . Ubicado en " << localizacion <<
+  aux << "ID: " << id << ". Inmueble llamado " << nombre << " . Ubicado en " << localizacion <<
     ". Costo mensual de mantenimiento: " << costo_mensual_mantenimiento << " dolares.\n";
   return aux.str();
 }
@@ -114,7 +114,7 @@ string to_string();
 string Patrocinio::to_string() {
 
   stringstream aux;
-  aux << "ID: " << id << ". Activo del tipo: " << tipo_activo << ", de la marca " << nombre <<
+  aux << "ID: " << id << ". Patrocinio de la marca " << nombre <<
     ", con un valor anual de " << valor_anual << " dolares. \n";
   return aux.str();
 }
