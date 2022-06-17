@@ -9,7 +9,7 @@ using namespace std;
 
 class Activo {
 //declaramos las variables de instancia, como protegidas
-protected:
+private:
   int id;
   string nombre;
   string tipo_activo;
@@ -32,7 +32,7 @@ Activo(int id_num, string nom, string tipo_a):
 };
 //Declaramos objeto empleado que hereda de Activo
 class Empleado: public Activo  {
-protected:
+private:
   double salario_mensual;
   string tipo_empleado;
 public:
@@ -64,7 +64,7 @@ string Empleado::to_string() {
 }
 //Declaramos objeto inmueble que hereda de Activo
 class Inmueble: public Activo {
-protected:
+private:
   string localizacion;
   double costo_mensual_mantenimiento;
 public:
