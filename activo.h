@@ -8,7 +8,7 @@
 using namespace std;
 
 class Activo {
-//declaramos las variables de instancia, como protegidas
+//declaramos las variables de instancia, como privadas
 private:
   int id;
   string nombre;
