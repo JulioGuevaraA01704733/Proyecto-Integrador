@@ -46,7 +46,7 @@ public:
     return nombre;
   }
   virtual double pago_anual_con_bonus() = 0;
-  //es abstracta ya que no se va a usar en esta clase padre
+  //es abstracta ya que no se va a usar esta clase padre
   string get_tipo_empleado() {
     return tipo_empleado;
    }
