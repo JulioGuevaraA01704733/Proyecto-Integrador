@@ -9,7 +9,7 @@ void menu(){
   cout << "Presione 4 para mostrar activos de un tipo especifico \n";
   cout << "Presione 5 para mostrar todos los activos \n";
   cout << "Presione 6 para calcular el balance anual del club \n";
-  cout << "Presione 7 para salir del programa \n";
+  cout << "Presione 7 para cerrar el programa \n";
 }
 //imprime un menu con las opciones que ofrece el programa
 int main(){
