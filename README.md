@@ -1,4 +1,4 @@
-# Proyecto-Integrador
+# TC1030  ProyectoIntegrador
 TC1030 Prog. Orientada a Objetos
 
 
