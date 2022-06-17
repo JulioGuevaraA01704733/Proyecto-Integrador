@@ -1,3 +1,14 @@
+/*
+ * Proyecto Nómina main
+ * Samuel Octavio González Azpeitia
+ * A01704696
+ * 16/10/2019
+ *
+ * Este es un proyecto demo para la clase TC1030 Programación Orientado a
+ * Objetos. Es un programa que captura diferentes tipos de empleados con sus
+ * respectivos sueldos, y nos permite calcular la nómina para cada tipo de
+ * empleado diferente.
+ */
 #ifndef ACTIVO_H_
 #define ACTIVO_H_
 
