@@ -57,7 +57,7 @@ public:
 string Empleado::to_string() {
 
   stringstream aux;
-  aux << "ID: " << id << " . Nombre: " << nombre <<
+  aux << "ID: " << id << ". Nombre: " << nombre <<
   ". Tipo de empleado: " << tipo_empleado << ". Salario mensual: " << salario_mensual << " dolares. \n";
    return aux.str();
 
